@@ -425,6 +425,111 @@ html {
   letter-spacing: 0.12em;
 }
 
+/* Clientes de RAPO Creative */
+.clients-section {
+  padding: clamp(30px, 4vw, 44px);
+  border: 1px solid var(--rapo-border);
+  background:
+    radial-gradient(circle at 50% 0, #2d261d 0, transparent 58%),
+    var(--rapo-surface);
+  color: var(--rapo-ivory);
+  box-shadow: 0 18px 55px #090806;
+}
+
+.clients-section .section-title {
+  max-width: 760px;
+  margin: 0 auto 26px;
+  color: var(--rapo-ivory);
+  font-size: clamp(1.55rem, 3vw, 2.25rem);
+  text-align: center;
+}
+
+.clients-section .section-title::after {
+  display: block;
+  width: 58px;
+  height: 3px;
+  margin: 18px auto 0;
+  border-radius: 999px;
+  background-color: var(--rapo-gold);
+  content: '';
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #6f5b3b;
+  border-radius: 18px;
+  background-color: #c9aa6b;
+  list-style: none;
+}
+
+.client-card {
+  min-width: 0;
+  background-color: #fffdf8;
+  transition: background-color 0.24s ease;
+}
+
+.client-card:hover {
+  background-color: #f7ead4;
+}
+
+.client-link {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  min-height: 132px;
+  padding: 14px;
+  color: var(--rapo-dark-text);
+  text-align: center;
+  text-decoration: none;
+}
+
+.client-link:focus-visible {
+  outline: 3px solid #a47e35;
+  outline-offset: -5px;
+}
+
+.client-logo-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 104px;
+  background-color: transparent;
+}
+
+.client-card--nes,
+.client-card--nes:hover,
+.client-logo-frame--nes {
+  background-color: #62666b;
+}
+
+.client-logo {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.client-card--atrec .client-logo {
+  width: 100%;
+}
+
+.client-card--enki .client-logo,
+.client-card--cayrd .client-logo,
+.client-card--cavi .client-logo,
+.client-card--schiavo .client-logo,
+.client-card--nes .client-logo {
+  max-width: 98px;
+}
+
 .feature-list,
 .process-list {
   display: grid;
@@ -901,6 +1006,10 @@ html {
   .hero-actions {
     align-items: center;
   }
+
+  .clients-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -924,6 +1033,7 @@ html {
   .process-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
 }
 
 /* ==================================================
@@ -998,6 +1108,14 @@ html {
   .feature-list,
   .process-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .clients-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .client-link {
+    min-height: 142px;
   }
 
   .site-footer {
