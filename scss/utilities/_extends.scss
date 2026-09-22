@@ -1,0 +1,9 @@
+// Placeholders reutilizables con @extend
+%rapo-card-motion {
+  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease, background-color 0.24s ease;
+}
+
+%rapo-focus-ring {
+  outline: 3px solid var(--rapo-gold-light);
+  outline-offset: 4px;
+}
