@@ -1,0 +1,132 @@
+/* ==================================================
+   3. CONTENIDO PRINCIPAL Y PORTADA
+   ================================================== */
+
+.site-main {
+  width: min(1180px, calc(100% - 24px));
+  margin: 0 auto;
+  padding: 28px 0 56px;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 32px;
+  padding: clamp(28px, 5vw, 68px);
+  overflow: hidden;
+  border: 1px solid var(--rapo-border);
+  border-radius: 30px;
+  background-color: var(--rapo-surface);
+  box-shadow: 0 24px 70px var(--rapo-shadow);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-width: 0;
+}
+
+.eyebrow-text {
+  margin: 0;
+  color: var(--rapo-gold);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  line-height: 1.4;
+}
+
+.eyebrow-text--dark {
+  color: #826023;
+}
+
+.page-title {
+  margin: 0;
+  color: var(--rapo-ivory);
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2.45rem, 6vw, 4.75rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.04;
+}
+
+.lead-text {
+  margin: 0;
+  color: var(--rapo-text-muted);
+  font-size: clamp(1.04rem, 2vw, 1.22rem);
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+.hero-actions {
+  margin-top: 4px;
+}
+
+.hero-figure {
+  margin: 0;
+  min-width: 0;
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #6f5b3b;
+  border-radius: 22px;
+  box-shadow: 0 18px 45px #0b0907;
+}
+
+.figure-caption {
+  margin-top: 12px;
+  color: #cbbd9f;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Botones de Bootstrap con identidad RAPO */
+.rapo-btn {
+  min-height: 48px;
+  padding: 11px 20px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  transition: background-color 0.22s ease, border-color 0.22s ease, color 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.rapo-btn--primary {
+  border-color: var(--rapo-gold);
+  background-color: var(--rapo-gold);
+  color: var(--rapo-bg);
+}
+
+.rapo-btn--secondary {
+  border-color: #75613f;
+  background-color: transparent;
+  color: var(--rapo-ivory);
+}
+
+.rapo-btn:hover {
+  border-color: var(--rapo-gold-light);
+  background-color: var(--rapo-gold-light);
+  color: var(--rapo-bg);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px #08070680;
+}
+
+.rapo-btn:focus-visible {
+  outline: 3px solid var(--rapo-gold-light);
+  outline-offset: 4px;
+  box-shadow: 0 0 0 5px #12100e;
+}
+
+.rapo-btn:active,
+.rapo-btn.btn:active {
+  border-color: #b48f44;
+  background-color: #b48f44;
+  color: var(--rapo-bg);
+  transform: translateY(0) scale(0.97);
+  box-shadow: none;
+}
