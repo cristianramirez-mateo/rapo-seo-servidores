@@ -1,0 +1,141 @@
+/* ==================================================
+   5. CAROUSEL DE BOOTSTRAP
+   ================================================== */
+
+.gallery-heading {
+  margin-bottom: 28px;
+}
+
+.rapo-carousel {
+  overflow: hidden;
+  border: 1px solid #6f5b3b;
+  border-radius: 24px;
+  background-color: #15120f;
+  box-shadow: 0 20px 46px #08070680;
+}
+
+.rapo-carousel .carousel-inner {
+  border-radius: 23px;
+}
+
+.carousel-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  min-height: 470px;
+  background-color: #17130f;
+  transition: background-color 0.3s ease, filter 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-panel:hover {
+  background-color: #1e1913;
+}
+
+.carousel-panel:focus {
+  outline: 3px solid var(--rapo-gold-light);
+  outline-offset: -7px;
+  filter: brightness(1.05);
+}
+
+.carousel-panel:active {
+  filter: brightness(0.93);
+  transform: scale(0.995);
+}
+
+.carousel-image {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.carousel-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 36px 52px 72px;
+}
+
+.carousel-copy h3 {
+  margin: 0 0 12px;
+  color: var(--rapo-ivory);
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.65rem, 4vw, 2.55rem);
+  font-weight: 700;
+}
+
+.carousel-copy p {
+  margin: 0;
+  color: var(--rapo-text-muted);
+}
+
+.carousel-copy .carousel-kicker {
+  margin-bottom: 12px;
+  color: var(--rapo-gold);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.rapo-carousel .carousel-indicators {
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.rapo-carousel .carousel-indicators [data-bs-target] {
+  width: 32px;
+  height: 5px;
+  margin: 0;
+  border: 0;
+  border-radius: 999px;
+  background-color: #f7f0e3;
+  transition: width 0.22s ease, background-color 0.22s ease, transform 0.22s ease;
+}
+
+.rapo-carousel .carousel-indicators [data-bs-target]:hover,
+.rapo-carousel .carousel-indicators [data-bs-target]:focus-visible {
+  width: 44px;
+  background-color: var(--rapo-gold-light);
+  outline: none;
+}
+
+.rapo-carousel .carousel-indicators [data-bs-target]:active {
+  transform: scaleX(0.86);
+}
+
+.rapo-carousel .carousel-indicators .active {
+  width: 48px;
+  background-color: var(--rapo-gold);
+}
+
+.rapo-carousel .carousel-control-prev,
+.rapo-carousel .carousel-control-next {
+  width: 48px;
+  height: 48px;
+  top: 50%;
+  margin: 0 12px;
+  border: 1px solid #d6b36a80;
+  border-radius: 50%;
+  background-color: #12100ed9;
+  opacity: 1;
+  transform: translateY(-50%);
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rapo-carousel .carousel-control-prev:hover,
+.rapo-carousel .carousel-control-next:hover {
+  background-color: var(--rapo-gold);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.rapo-carousel .carousel-control-prev:focus-visible,
+.rapo-carousel .carousel-control-next:focus-visible {
+  outline: 3px solid var(--rapo-gold-light);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 4px #12100e;
+}
+
+.rapo-carousel .carousel-control-prev:active,
+.rapo-carousel .carousel-control-next:active {
+  background-color: #b48f44;
+  transform: translateY(-50%) scale(0.93);
+}
