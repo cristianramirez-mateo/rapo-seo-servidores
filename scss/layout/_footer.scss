@@ -1,0 +1,58 @@
+/* ==================================================
+   8. PIE DE PÁGINA Y ENLACES
+   ================================================== */
+
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  width: min(1180px, calc(100% - 24px));
+  margin: 0 auto;
+  padding: 32px 0 46px;
+  border-top: 1px solid var(--rapo-border);
+}
+
+.copyright-text {
+  margin: 0;
+  color: #bdb2a1;
+  font-size: 0.92rem;
+}
+
+.social-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social-link {
+  display: inline-block;
+  color: var(--rapo-gold);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.social-link:hover {
+  color: var(--rapo-ivory);
+  text-decoration: underline;
+  text-decoration-color: var(--rapo-gold);
+  text-underline-offset: 5px;
+  transform: translateY(-2px);
+}
+
+.social-link:focus-visible {
+  outline: 3px solid var(--rapo-gold-light);
+  outline-offset: 4px;
+  border-radius: 4px;
+  color: var(--rapo-ivory);
+}
+
+.social-link:active {
+  color: #b48f44;
+  transform: translateY(0) scale(0.96);
+}
