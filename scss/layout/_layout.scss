@@ -1,0 +1,48 @@
+/* ==================================================
+   7. MOBILE FIRST: GRID, FLEXBOX Y BOX MODEL
+   ================================================== */
+
+.layout-grid .site-main {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.layout-grid .hero-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    'contenido'
+    'imagen';
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 0;
+}
+
+.layout-grid .hero-content {
+  grid-area: contenido;
+}
+
+.layout-grid .hero-figure {
+  grid-area: imagen;
+}
+
+.layout-grid .content-section {
+  margin-top: 0;
+}
+
+.project-cards {
+  margin-top: 8px;
+}
+
+.service-grid {
+  margin-top: 8px;
+}
+
+.contact-address {
+  margin: 22px 0 0;
+  color: #4a4238;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.7;
+}
