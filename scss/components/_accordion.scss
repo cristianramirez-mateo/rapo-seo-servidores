@@ -1,0 +1,65 @@
+/* ==================================================
+   6. ACORDEÓN DE BOOTSTRAP
+   ================================================== */
+
+.rapo-accordion {
+  margin-top: 28px;
+  --bs-accordion-border-color: #5a4932;
+  --bs-accordion-border-radius: 14px;
+  --bs-accordion-inner-border-radius: 13px;
+}
+
+.rapo-accordion .accordion-item {
+  overflow: hidden;
+  border-color: #5a4932;
+  background-color: #17130f;
+  color: var(--rapo-ivory);
+}
+
+.rapo-accordion .accordion-button {
+  background-color: #17130f;
+  color: var(--rapo-ivory);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  box-shadow: none;
+  transition: background-color 0.22s ease, color 0.22s ease, padding-left 0.22s ease;
+}
+
+.rapo-accordion .accordion-button:not(.collapsed) {
+  background-color: var(--rapo-gold);
+  color: var(--rapo-bg);
+}
+
+.rapo-accordion .accordion-button:hover {
+  background-color: #2a231a;
+  color: var(--rapo-gold-light);
+  padding-left: 24px;
+}
+
+.rapo-accordion .accordion-button:not(.collapsed):hover {
+  background-color: var(--rapo-gold-light);
+  color: var(--rapo-bg);
+}
+
+.rapo-accordion .accordion-button:focus-visible {
+  outline: 3px solid var(--rapo-gold-light);
+  outline-offset: -4px;
+  box-shadow: none;
+}
+
+.rapo-accordion .accordion-button:active {
+  background-color: #b48f44;
+  color: var(--rapo-bg);
+}
+
+.rapo-accordion .accordion-button::after {
+  filter: invert(88%) sepia(33%) saturate(650%) hue-rotate(352deg) brightness(95%);
+}
+
+.rapo-accordion .accordion-button:not(.collapsed)::after {
+  filter: brightness(0.2);
+}
+
+.rapo-accordion .accordion-body {
+  color: var(--rapo-text-muted);
+}
