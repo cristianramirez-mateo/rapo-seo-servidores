@@ -1,75 +1,148 @@
-# RAPO Creative — Entregable SEO y Servidores
+# RAPO Creative — Proyecto Final
 
-Proyecto final del módulo, desarrollado para aplicar SEO local, técnico, on-page y off-page sobre el sitio de RAPO Creative. Incluye cinco páginas HTML semánticas, estilos propios, Bootstrap 5.3.8 y recursos gráficos con nombres descriptivos.
-
-## Sitio y repositorio
-
-- Sitio de la marca: [rapocreative.com.ar](https://rapocreative.com.ar/)
-- Repositorio público de esta entrega: [cristianramirez-mateo/rapo-seo-servidores](https://github.com/cristianramirez-mateo/rapo-seo-servidores)
+Sitio web estático de 5 páginas desarrollado como proyecto final del curso, integrando HTML5 semántico, SCSS con arquitectura de partials, Bootstrap, diseño responsive, animaciones, SEO y preparación para despliegue en Vercel o Netlify.
 
 ## Páginas
 
-- `index.html`: agencia de marketing digital en Rosario.
-- `pages/nosotros.html`: identidad, equipo, valores y forma de trabajo.
-- `pages/servicios.html`: community management, diseño web y estrategia para creadoras.
-- `pages/proyectos.html`: áreas de proyectos y proceso de trabajo.
-- `pages/contacto.html`: contacto, ubicación y atención online.
-
-## Palabras clave por página
-
-| Página | Palabras clave principales |
-| --- | --- |
-| Inicio | agencia de marketing digital en Rosario, community management, diseño web |
-| Nosotros | agencia de marketing en Rosario, equipo de marketing digital, estrategia de marca |
-| Servicios | community management en Rosario, diseño web en Rosario, gestión de redes sociales |
-| Proyectos | proyectos de marketing digital, portfolio de diseño web, marca personal |
-| Contacto | contacto agencia de marketing Rosario, presupuesto de community manager, presupuesto diseño web |
-
-Las palabras clave están integradas de forma natural en títulos, descripciones y contenido, sin repetirlas de manera excesiva.
-
-## SEO aplicado
-
-### SEO on-page
-
-- Un solo `<h1>` por página y jerarquía ordenada de `<h2>` y `<h3>`.
-- Títulos `<title>` únicos y descriptivos.
-- Una `meta description` y una `meta keywords` específica en cada HTML.
-- Contenido semántico organizado con `header`, `nav`, `main`, `section`, `article`, `figure`, `figcaption`, `address` y `footer`.
-- Enlaces internos descriptivos entre las cinco páginas.
-- Todas las imágenes poseen `alt` relacionado con su contenido.
-- Nombres descriptivos para archivos HTML e imágenes.
-
-### SEO técnico y local
-
-- Atributo `lang="es-AR"`, diseño responsive y navegación accesible.
-- URL canónica, directivas `robots`, metadatos Open Graph y tarjeta de X/Twitter en cada página.
-- `robots.txt` y `sitemap.xml` con las cinco URLs públicas.
-- Datos estructurados JSON-LD de tipo `ProfessionalService` con ubicación en Rosario, Santa Fe, Argentina.
-- Ubicación visible dentro de la página de contacto.
-- Recursos servidos por HTTPS y relaciones `noopener noreferrer` en enlaces externos.
-
-### SEO off-page
-
-- Enlace al perfil oficial de [RAPO Creative en Instagram](https://www.instagram.com/rapocreative/).
-- Perfil social asociado mediante `sameAs` en los datos estructurados y `rel="me"` en los enlaces correspondientes.
-- Metadatos Open Graph para que cada URL tenga un título y una descripción adecuados al compartirse.
-
-## Accesibilidad
-
-- Enlace “Saltar al contenido principal” en las cinco páginas.
-- Textos alternativos descriptivos en todas las imágenes.
-- Controles de Bootstrap con etiquetas ARIA.
-- Estados visibles de foco para enlaces y botones.
-- Se eliminaron focos innecesarios de elementos no interactivos.
-- Paleta revisada según WCAG AA: el contraste mínimo de texto normal utilizado es superior a `4.5:1`.
-- Respeto por `prefers-reduced-motion` para personas que reducen animaciones.
+- `index.html`
+- `pages/nosotros.html`
+- `pages/servicios.html`
+- `pages/proyectos.html`
+- `pages/contacto.html`
 
 ## Tecnologías
 
-- HTML5 semántico.
-- CSS3 Mobile First, Grid, Flexbox y media queries.
-- Bootstrap 5.3.8 mediante CDN.
-- JSON-LD, Open Graph, `robots.txt` y sitemap XML.
-- Git y GitHub.
+- HTML5 semántico
+- SCSS
+- CSS3
+- Bootstrap 5.3.8
+- Animate.css
+- Git y GitHub
 
-Para recorrer el proyecto en forma local, abrí `index.html` con conexión a internet para cargar Bootstrap y Google Fonts.
+## Arquitectura SCSS
+
+El código fuente de estilos está organizado dentro de `scss/` mediante partials.
+
+Incluye:
+
+- Variables
+- Nesting
+- Mixins con parámetros
+- `@extend`
+- Partials
+- Media queries
+- Animaciones con `@keyframes`
+
+El archivo `scss/main.scss` contiene únicamente sentencias `@use`.
+
+El CSS compilado utilizado por el sitio se encuentra en:
+
+`styles/styles.css`
+
+## Responsividad
+
+El sitio fue trabajado con enfoque Mobile First y media queries para:
+
+- Mobile
+- Tablet
+- Desktop
+
+Se utiliza Grid, Flexbox y componentes responsivos de Bootstrap. También se evita el scroll horizontal mediante ajustes específicos de ancho y overflow.
+
+## Bootstrap
+
+Las cinco páginas incluyen una navbar Bootstrap responsive con menú hamburguesa funcional en dispositivos móviles y estilos personalizados para mantener la identidad visual de RAPO Creative.
+
+## Animaciones
+
+El proyecto utiliza dos tipos de animaciones:
+
+1. Animación nativa mediante SCSS/CSS con `@keyframes rapo-enter`.
+2. Librería externa Animate.css mediante CDN.
+
+## SEO
+
+Cada HTML contiene:
+
+- `<title>` único
+- `meta description` propia
+- `meta keywords` propia
+- atributos `alt` descriptivos en imágenes
+- estructura HTML semántica
+- URL canónica
+- metadatos Open Graph
+- datos estructurados JSON-LD
+
+También se incluyen:
+
+- `robots.txt`
+- `sitemap.xml`
+
+## Estructura
+
+```text
+.
+├── index.html
+├── pages/
+│   ├── nosotros.html
+│   ├── servicios.html
+│   ├── proyectos.html
+│   └── contacto.html
+├── scss/
+│   ├── utilities/
+│   │   ├── _variables.scss
+│   │   ├── _mixins.scss
+│   │   └── _extends.scss
+│   ├── base/
+│   │   └── _base.scss
+│   ├── components/
+│   │   ├── _navbar.scss
+│   │   ├── _cards.scss
+│   │   ├── _carousel.scss
+│   │   ├── _accordion.scss
+│   │   └── _animations.scss
+│   ├── layout/
+│   │   ├── _layout.scss
+│   │   ├── _footer.scss
+│   │   └── _responsive.scss
+│   ├── pages/
+│   │   └── _home.scss
+│   └── main.scss
+├── styles/
+│   └── styles.css
+├── assets/
+│   └── img/
+├── robots.txt
+├── sitemap.xml
+└── README.md
+```
+
+## Compilación SCSS
+
+Ejemplo con Sass:
+
+```bash
+sass scss/main.scss styles/styles.css
+```
+
+Para trabajar observando cambios:
+
+```bash
+sass --watch scss/main.scss styles/styles.css
+```
+
+## Deploy
+
+El sitio debe desplegarse en Vercel o Netlify una vez creado el repositorio público definitivo de esta entrega.
+
+**URL del deploy:** pendiente de completar al publicar el repositorio final.
+
+## Entrega
+
+La entrega final deberá realizarse mediante un repositorio público nuevo e independiente de las entregas anteriores.
+
+Repositorio final previsto:
+
+`rapo-proyecto-final`
+
+Debe contener al menos dos commits descriptivos y el enlace público del deploy en este README.
